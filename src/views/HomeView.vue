@@ -1,14 +1,8 @@
 <script>
-import { ref } from 'vue'
-import TheWelcome from '../components/TheWelcome.vue'
-
 export default {
-  components: { TheWelcome },
-
-  setup() {
-    let message = ref('Hello World')
-    return {
-      message
+  methods: {
+    flash(message) {
+      alert(message)
     }
   }
 }
@@ -16,9 +10,8 @@ export default {
 
 <template>
   <main>
-    <TheWelcome />
-    {{ message }}
-
-    <input type="text" v-model="message" />
+    <p>
+      <button @click="flash('It works')">Click Me</button>
+    </p>
   </main>
 </template>
