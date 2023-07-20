@@ -1,6 +1,15 @@
+<script>
+import flash from '@/mixins/flash.js'
+
+export default {
+  mixins: [flash]
+}
+</script>
+
+
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <button @click="flash('It works')">Click Me</button>
   </div>
 </template>
 

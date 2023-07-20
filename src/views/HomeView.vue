@@ -1,9 +1,11 @@
 <script>
+import { useFlash } from '@/composables/useFlash.js'
+
 export default {
-  methods: {
-    flash(message) {
-      alert(message)
-    }
+  setup() {
+    let { flash } = useFlash()
+
+    return { flash }
   }
 }
 </script>
@@ -11,7 +13,7 @@ export default {
 <template>
   <main>
     <p>
-      <button @click="flash('It works')">Click Me</button>
+      <button @click="flash('Success !', 'It works')">Click Me</button>
     </p>
   </main>
 </template>
